@@ -21,7 +21,7 @@ namespace NHibernate.Dapper
 			return session.Connection.Query<T>(sql, param, transaction);
 		}
         
-    //Detta är enda sättet jag kan få transaktionen till Dapper, om jag vill använda samma "väg" (via Database) och samma connection så måste frågorna ligga i samma transaktion.
+    
     //http://ayende.com/blog/1583/i-hate-this-code
     private static IDbTransaction GetTransaction(ISession session)
     {
